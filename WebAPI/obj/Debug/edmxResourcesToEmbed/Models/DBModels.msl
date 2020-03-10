@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuizDBModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="Participant">
+      <EntityTypeMapping TypeName="QuizDBModel.Participant">
+        <MappingFragment StoreEntitySet="Participant">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Subscriber" ColumnName="Subscriber" />
+          <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Question">
+      <EntityTypeMapping TypeName="QuizDBModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="IOT2" ColumnName="IOT2" />
+          <ScalarProperty Name="CS2" ColumnName="CS2" />
+          <ScalarProperty Name="SOF2" ColumnName="SOF2" />
+          <ScalarProperty Name="BUS2" ColumnName="BUS2" />
+          <ScalarProperty Name="IOT1" ColumnName="IOT1" />
+          <ScalarProperty Name="CS1" ColumnName="CS1" />
+          <ScalarProperty Name="SOF1" ColumnName="SOF1" />
+          <ScalarProperty Name="BUS1" ColumnName="BUS1" />
+          <ScalarProperty Name="QnID" ColumnName="QnID" />
+          <ScalarProperty Name="Qn" ColumnName="Qn" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
