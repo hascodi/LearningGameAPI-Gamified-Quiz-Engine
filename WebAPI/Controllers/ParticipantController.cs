@@ -12,7 +12,7 @@ namespace WebAPI.Controllers
     {
         [HttpPost]
         [Route("api/InsertParticipant")]
-        public Participant Insert(Participant model)
+        public Participant Insert(Participant model) 
         {
             using (DBLearningModel db = new DBLearningModel())
             {
