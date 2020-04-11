@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="06eec58f6c1d4262adfa79e6220f08a3" Name="Diagram1">
-        <EntityTypeShape EntityType="QuizDBModel.Participant" PointX="0.75" PointY="1" Width="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuizDBModel.Question" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4f037da08db74dc795c21556db0c6ec9" Name="Diagram1">
+        <EntityTypeShape EntityType="LearningDBModel.Participant" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningDBModel.Question" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

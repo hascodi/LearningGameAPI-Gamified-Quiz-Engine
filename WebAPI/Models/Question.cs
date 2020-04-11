@@ -19,14 +19,7 @@ namespace WebAPI.Models
         public string ImageName { get; set; }
         public string Option1 { get; set; }
         public string Option2 { get; set; }
+        public string Option3 { get; set; }
         public Nullable<int> Answer { get; set; }
-        public Nullable<int> BUS1 { get; set; }
-        public Nullable<int> SOF1 { get; set; }
-        public Nullable<int> CS1 { get; set; }
-        public Nullable<int> IOT1 { get; set; }
-        public Nullable<int> BUS2 { get; set; }
-        public Nullable<int> SOF2 { get; set; }
-        public Nullable<int> CS2 { get; set; }
-        public Nullable<int> IOT2 { get; set; }
     }
 }

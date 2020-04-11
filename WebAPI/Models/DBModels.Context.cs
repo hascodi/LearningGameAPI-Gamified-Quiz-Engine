@@ -13,10 +13,10 @@ namespace WebAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBModel : DbContext
+    public partial class DBLearningModel : DbContext
     {
-        public DBModel()
-            : base("name=DBModel")
+        public DBLearningModel()
+            : base("name=DBLearningModel")
         {
         }
     

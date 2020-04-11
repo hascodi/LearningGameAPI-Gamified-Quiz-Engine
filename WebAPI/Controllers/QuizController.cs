@@ -15,13 +15,12 @@ namespace WebAPI.Controllers
         [Route("api/Questions")]
         public HttpResponseMessage GetQuestions()
         {
-            using (DBModel db = new DBModel())
+            using (DBLearningModel db = new DBLearningModel())
             {
                 //retourneer alle koloms van de tabel behalve de laatste kolom (answer)
                 //dit doet die random. Nog wijzigen naar een bepaalde volgorde
                 var Qns = db.Question
-                    .Select(x => new { QnID = x.QnID, Qn = x.Qn, ImageName = x.ImageName, x.Option1, x.Option2,
-                        x.BUS1, x.BUS2, x.SOF1, x.SOF2, x.CS1, x.CS2, x.IOT1, x.IOT2 })
+                    .Select(x => new { QnID = x.QnID, Qn = x.Qn, ImageName = x.ImageName, x.Option1, x.Option2, x.Option3 })
                     .OrderBy(y => Guid.NewGuid())
                     .ToArray();
                 //format questions array
@@ -30,15 +29,8 @@ namespace WebAPI.Controllers
                     {
                         QnID = x.QnID,
                         Qn = x.Qn,
-                        BUS1 = x.BUS1,
-                        BUS2 = x.BUS2,
-                        SOF1 = x.SOF1,
-                        SOF2 = x.SOF2,
-                        CS1 = x.CS1,
-                        CS2 = x.CS2,
-                        IOT1 = x.IOT1,
-                        IOT2 = x.IOT2,
-                        Options = new string[] { x.Option1, x.Option2 }
+                        ImageName = x.ImageName,
+                        Options = new string[] { x.Option1, x.Option2, x.Option3 }
                     }).ToList();
                 //then return the questions
                 return this.Request.CreateResponse(HttpStatusCode.OK, updated);
@@ -50,7 +42,7 @@ namespace WebAPI.Controllers
         [Route("api/Answers")]
         public HttpResponseMessage GetAnswers(int[] qIDs)
         {
-            using (DBModel db = new DBModel())
+            using (DBLearningModel db = new DBLearningModel())
             {
                 var result = db.Question
                      .AsEnumerable()

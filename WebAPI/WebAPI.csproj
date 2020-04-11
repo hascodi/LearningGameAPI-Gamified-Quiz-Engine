@@ -207,10 +207,13 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\handwassen.png" />
+    <Content Include="Images\meter.png" />
+    <Content Include="Images\tuin.png" />
     <Content Include="Models\DBModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBModels.Context.cs</LastGenOutput>
       <DependentUpon>DBModels.edmx</DependentUpon>
+      <LastGenOutput>DBModels.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\DBModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

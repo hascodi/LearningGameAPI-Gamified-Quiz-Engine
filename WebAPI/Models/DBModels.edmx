@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QuizDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="LearningDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Participant">
           <Key>
             <PropertyRef Name="ParticipantID" />
@@ -13,8 +13,7 @@
           <Property Name="Name" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Score" Type="int" />
-          <Property Name="Subscriber" Type="varchar" MaxLength="50" />
-          <Property Name="Gender" Type="nchar" MaxLength="10" />
+          <Property Name="TimeSpent" Type="int" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
@@ -23,36 +22,29 @@
           <Property Name="QnID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Qn" Type="varchar" MaxLength="250" />
           <Property Name="ImageName" Type="varchar" MaxLength="50" />
-          <Property Name="Option1" Type="varchar" MaxLength="50" />
-          <Property Name="Option2" Type="varchar" MaxLength="50" />
+          <Property Name="Option1" Type="varchar" MaxLength="100" />
+          <Property Name="Option2" Type="varchar" MaxLength="100" />
+          <Property Name="Option3" Type="varchar" MaxLength="100" />
           <Property Name="Answer" Type="int" />
-          <Property Name="BUS1" Type="int" />
-          <Property Name="SOF1" Type="int" />
-          <Property Name="CS1" Type="int" />
-          <Property Name="IOT1" Type="int" />
-          <Property Name="BUS2" Type="int" />
-          <Property Name="SOF2" Type="int" />
-          <Property Name="CS2" Type="int" />
-          <Property Name="IOT2" Type="int" />
         </EntityType>
-        <EntityContainer Name="QuizDBModelStoreContainer">
+        <EntityContainer Name="LearningDBModelStoreContainer">
           <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QuizDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="LearningDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Participant">
           <Key>
             <PropertyRef Name="ParticipantID" />
           </Key>
-          <Property Name="ParticipantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="Name" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
-          <Property Name="Email" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="ParticipantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Score" Type="Int32" />
-          <Property Name="Subscriber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TimeSpent" Type="Int32" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
@@ -61,19 +53,12 @@
           <Property Name="QnID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Qn" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Option1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Option2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Option1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Option2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Option3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Answer" Type="Int32" />
-          <Property Name="BUS1" Type="Int32" />
-          <Property Name="SOF1" Type="Int32" />
-          <Property Name="CS1" Type="Int32" />
-          <Property Name="IOT1" Type="Int32" />
-          <Property Name="BUS2" Type="Int32" />
-          <Property Name="SOF2" Type="Int32" />
-          <Property Name="CS2" Type="Int32" />
-          <Property Name="IOT2" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBLearningModel" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Participant" EntityType="Self.Participant" />
           <EntitySet Name="Question" EntityType="Self.Question" />
         </EntityContainer>
@@ -82,35 +67,27 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuizDBModelStoreContainer" CdmEntityContainer="DBModel">
+        <EntityContainerMapping StorageEntityContainer="LearningDBModelStoreContainer" CdmEntityContainer="DBLearningModel">
           <EntitySetMapping Name="Participant">
-            <EntityTypeMapping TypeName="QuizDBModel.Participant">
+            <EntityTypeMapping TypeName="LearningDBModel.Participant">
               <MappingFragment StoreEntitySet="Participant">
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Subscriber" ColumnName="Subscriber" />
                 <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Question">
-            <EntityTypeMapping TypeName="QuizDBModel.Question">
+            <EntityTypeMapping TypeName="LearningDBModel.Question">
               <MappingFragment StoreEntitySet="Question">
-                <ScalarProperty Name="IOT2" ColumnName="IOT2" />
-                <ScalarProperty Name="CS2" ColumnName="CS2" />
-                <ScalarProperty Name="SOF2" ColumnName="SOF2" />
-                <ScalarProperty Name="BUS2" ColumnName="BUS2" />
-                <ScalarProperty Name="IOT1" ColumnName="IOT1" />
-                <ScalarProperty Name="CS1" ColumnName="CS1" />
-                <ScalarProperty Name="SOF1" ColumnName="SOF1" />
-                <ScalarProperty Name="BUS1" ColumnName="BUS1" />
                 <ScalarProperty Name="QnID" ColumnName="QnID" />
                 <ScalarProperty Name="Qn" ColumnName="Qn" />
                 <ScalarProperty Name="ImageName" ColumnName="ImageName" />
                 <ScalarProperty Name="Option1" ColumnName="Option1" />
                 <ScalarProperty Name="Option2" ColumnName="Option2" />
+                <ScalarProperty Name="Option3" ColumnName="Option3" />
                 <ScalarProperty Name="Answer" ColumnName="Answer" />
               </MappingFragment>
             </EntityTypeMapping>

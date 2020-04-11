@@ -14,7 +14,7 @@ namespace WebAPI.Controllers
         [Route("api/InsertParticipant")]
         public Participant Insert(Participant model)
         {
-            using (DBModel db = new DBModel())
+            using (DBLearningModel db = new DBLearningModel())
             {
                 db.Participant.Add(model);
                 db.SaveChanges();
@@ -26,12 +26,11 @@ namespace WebAPI.Controllers
         [Route("api/UpdateOutput")]
         public void UpdateOutput(Participant model)
         {
-            using (DBModel db = new DBModel())
+            using (DBLearningModel db = new DBLearningModel())
             {
                 db.Entry(model).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
         }
-
     }
 }
