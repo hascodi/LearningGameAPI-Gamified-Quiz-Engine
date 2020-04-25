@@ -207,8 +207,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\dirty.png" />
     <Content Include="Images\handwassen.png" />
+    <Content Include="Images\hoest.png" />
+    <Content Include="Images\infected.png" />
+    <Content Include="Images\jogging.png" />
     <Content Include="Images\meter.png" />
+    <Content Include="Images\shopping.png" />
+    <Content Include="Images\sick.png" />
+    <Content Include="Images\stayhome.png" />
     <Content Include="Images\tuin.png" />
     <Content Include="Models\DBModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
