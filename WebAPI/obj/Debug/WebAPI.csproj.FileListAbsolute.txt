@@ -176,6 +176,8 @@ C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\Corona Learning Game\
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\Corona Learning Game\GameWebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\Corona Learning Game\GameWebAPI\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\Corona Learning Game\GameWebAPI\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.csprojAssemblyReference.cache
+C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\WebAPI.dll.config
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\WebAPI.dll
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\WebAPI.pdb
@@ -260,8 +262,6 @@ C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWe
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\System.Web.WebPages.Razor.xml
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\Antlr3.Runtime.pdb
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.csprojAssemblyReference.cache
-C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Has\Documents\1. WorkerPro\Digital Marketing\Apps\C learninggame\GameWebAPI\WebAPI\obj\Debug\WebAPI.pdb
